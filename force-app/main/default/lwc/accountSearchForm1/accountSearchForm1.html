@@ -1,0 +1,10 @@
+<template>
+    <lightning-layout horizontal-align="center" pull-to-boundary="small" vertical-align="start">
+        <lightning-layout-item flexibility="grow" padding="around-small">
+            <lightning-input type="search" onchange={accountNameChangeHandler} label="Searching" variant="label-hidden" placeholder="Searching..."></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item flexibility="grow" padding="around-small">
+            <lightning-button variant="base" label="Search" onclick={handleClick}></lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

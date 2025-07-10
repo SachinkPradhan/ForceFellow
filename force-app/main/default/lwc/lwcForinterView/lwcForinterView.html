@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Account Management" icon-name="standard:account">
+    <lightning-layout>
+        <lightning-layout-item padding="around-small" size="5">
+            <div class="slds-p-around_medium lgc-bg">
+                <lightning-input name="AccName" type="text" label="Account Name" onchange={changeHandler} value={accName}></lightning-input>
+            </div>
+        </lightning-layout-item>    
+        <lightning-layout-item padding="around-small" size="5">
+            <div class="slds-p-around_medium lgc-bg">
+                <lightning-input name="AccPhone" type="text" label="phone" onchange={changeHandler} value={accPhone}></lightning-input>
+            </div>
+        </lightning-layout-item>
+    </lightning-layout>
+
+        <div class="slds-m-around_medium slds-align--absolute-center">
+            
+            <lightning-button label="Create Account" onclick={handleCreateAccount} variant="brand"></lightning-button>
+        </div>
+        
+        <template if:true={accounts}>
+            <lightning-datatable
+                key-field="id"
+                data={accounts}
+                columns={columns}
+                hide-checkbox-column="true"
+                onrowaction={handleRowAction}>
+            </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>

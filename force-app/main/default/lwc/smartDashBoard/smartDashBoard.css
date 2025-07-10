@@ -1,0 +1,30 @@
+
+        .refresh-button {
+            margin-bottom: 1rem;
+        }
+        h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+        .icon {
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+        .red-icon {
+            color: #e04545; 
+        }
+        .orange-icon {
+            color: #f5a623; 
+        }
+        .green-icon {
+            color: #34a853; 
+        }
+        .category p {
+            margin-left: 1.8rem;
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+        }

@@ -1,0 +1,58 @@
+:host {
+    display: block;
+    margin: 1rem;
+    font-family: "Segoe UI", sans-serif;
+}
+.track-container {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e5e5;
+}
+.album-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+.album-cover {
+    width: 120px;
+    height: 120px;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.track-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.track-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #1db954;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+.track-name:hover {
+    color: #17a74b;
+}
+.artists,
+.popularity,
+.album-link,
+.release-date {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0;
+}
+.album-link {
+    color: #0070d2;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.album-link:hover {
+    text-decoration: none;
+    color: #005fb2;
+}

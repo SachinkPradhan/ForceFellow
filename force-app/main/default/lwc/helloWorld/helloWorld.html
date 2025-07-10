@@ -1,0 +1,36 @@
+<template>
+   <lightning-card title="Testing Lds">
+   <!--<c-hello-india></c-hello-india>
+   <div>
+      <p>Employee Name : {employee.empName}</p>
+      <p>Employee Age : {employee.empAge}</p>
+      <p>Employee City : {employee.empCity}</p>
+      <p>Employee Salary : {employee.empSalary}</p>
+      <p>Employee Band : {getEmployeeCode}</p>
+   </div>  -->
+   <!--
+   <div> Employee is Sachin1</div>
+   <div class="slds-p-around_medium lgc-bg">
+      <lightning-input type="text" label="Enter some text" placeholder="input something" onchange={handleInputChange}></lightning-input>
+  </div>
+  <lightning-button label="Submit" title="Non-primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>-->
+
+   <lightning-layout>
+      <lightning-layout-item size="6" padding="around-small">
+         <lightning-card title="Create Account">
+            <lightning-input name="Account Name" label="Name" onchange={nameChangeHandler} value={accountName} minlength="8" type="text" placeholder="Account Name"></lightning-input>
+            <lightning-input name="Account Phone" label="Phone" onchange={phoneChangeHandler} value={accountPhone} minlength="10" maxlength="10" placeholder="Account Phone" type="number"></lightning-input>
+            <lightning-input name="Account Website" label="Website" onchange={websiteChangeHandler} value={accountWebsite} placeholder="Account Website"></lightning-input>
+            <lightning-input name="Annual Revenue" label="AnnualRevenue" onchange={revenueChangeHandler} value={AccountRevenue} ></lightning-input>
+
+<br>
+            <lightning-button label="create account" variant="brand" onclick={createAccount}></lightning-button>
+         </lightning-card>
+      </lightning-layout-item>
+      
+      <lightning-layout-item size="6" padding="around-small">
+
+      </lightning-layout-item>
+   </lightning-layout>
+</lightning-card>
+</template>

@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Datatable Example" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <template lwc:if={accObject.data}>
+                <lightning-datatable
+                    key-field="Id"
+                    data={accObject.data}
+                    columns={columns}
+                    onsave={handleSave}
+                    draft-values={draftValues}>
+                </lightning-datatable>
+            </template>
+            <template lwc:if={accObject.error}>
+                <!-- Handle Apex error -->
+                <p>No data in accObject</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

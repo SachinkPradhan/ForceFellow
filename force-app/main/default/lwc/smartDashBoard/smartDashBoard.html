@@ -1,0 +1,50 @@
+<template>
+    <lightning-card title="Smart Escalation Dashboard">
+        <lightning-button label="Refresh" onclick={handleRefresh} class="refresh-button"></lightning-button>
+        <template if:true={cases}>
+            <div>
+                <h3>
+                    <span class="icon red-icon" title="Critical cases" aria-label="Critical cases">&#x25CF;</span>
+                    Critical Cases ({cases.Critical.length})
+                </h3>
+                <template for:each={cases.Critical} for:item="caseItem">
+                    <p key={caseItem.Id}>
+                        <a href="#" data-id={caseItem.Id} onclick={handleNavigate} class="case-link">
+                                {caseItem.CaseNumber}
+                        </a>
+                        : {caseItem.Status}
+                    </p>
+                </template>
+            </div>
+            <div>
+                <h3>
+                    <span class="icon orange-icon" title="Warning cases" aria-label="Warning cases">&#x25CF;</span>
+                    Warning Cases ({cases.Warning.length})
+                </h3>
+                <template for:each={cases.Warning} for:item="caseItem">
+                    <p key={caseItem.Id}>
+                        <a href="#" data-id={caseItem.Id} onclick={handleNavigate} class="case-link">
+                                {caseItem.CaseNumber}
+                        </a>
+                         : {caseItem.Status}
+                    </p>
+                </template>
+            </div>
+            <div>
+                <h3>
+                    <span class="icon green-icon" title="Safe cases" aria-label="Safe cases">&#x25CF;</span>
+                    Safe Cases ({cases.Safe.length})
+                </h3>
+                <template for:each={cases.Safe} for:item="caseItem">
+                    <p key={caseItem.Id}>
+                        <a href="#" data-id={caseItem.Id} onclick={handleNavigate} class="case-link">
+                                {caseItem.CaseNumber}
+                        </a>
+                         : {caseItem.Status}
+                    </p>
+                </template>
+            </div>
+        </template>
+    </lightning-card>
+    
+</template>

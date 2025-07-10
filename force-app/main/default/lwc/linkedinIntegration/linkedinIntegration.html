@@ -1,0 +1,31 @@
+<template>
+    <lightning-card icon-name="standard:account" variant="base">
+        
+      <div slot="title">
+          Salesforce To LinkedIn Integration
+      </div>
+      <div slot="actions">
+        
+      </div>
+
+      <div slot="footer">
+            <lightning-button 
+            variant="Success"
+            label="PostinLinkedIn" 
+            onclick={handleClick} 
+            ></lightning-button>
+      </div>
+
+      <div class="inputWidth slds-align--absolute-center">
+        <lightning-input 
+          type="text"
+          label="Enter some text"
+          onchange={handleChange}
+          value={inputValue}
+          name="input-one"
+          class="slds-m-left_x-small"
+        ></lightning-input>
+      </div>
+
+    </lightning-card>
+</template>

@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Dynamic record id">
+        <lightning-button label="New" variant="brand" onclick={clickHandler}></lightning-button> 
+        <template lwc:if={showForm}>
+            <lightning-record-form
+            object-api-name={objectApiName}
+            fields={fieldList}
+            onsuccess={handleSuccess}
+            columns="2"
+        ></lightning-record-form>
+        </template>      
+    </lightning-card>
+</template>

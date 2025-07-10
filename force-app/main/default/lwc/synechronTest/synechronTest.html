@@ -1,0 +1,14 @@
+<template>
+    <Lightning-card title="Msking Creditcard">
+        <lightning-layout>
+            <lightning-layout-item padding="around-small">
+                <Lightning-input label="Enter Credit Card Number" value={cardNumber} onchange={changeHandler}></Lightning-input>
+            </lightning-layout-item>
+            <br>
+            <lightning-layout-item padding="around-small">
+                <lightning-formatted-text value={maskedCreditCard} ></lightning-formatted-text>
+            </lightning-layout-item>    
+            
+        </lightning-layout>
+    </Lightning-card>
+</template>

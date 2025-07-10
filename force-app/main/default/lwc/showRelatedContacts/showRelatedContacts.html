@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Contact Records">
+        <div style="height: 300px;">
+            <lightning-datatable if:true={contacts.data}
+                    key-field="id"
+                    data={contacts.data}
+                    show-row-number-column
+                    hide-checkbox-column
+                    columns={columns}>
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,89 @@
+<template>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col">
+          <lightning-card icon-name="standard:account" variant="base" title="Add new task">
+            <div class="slds-var-p-around_small">
+                <p class="slds-float_right">Card Body</p>
+                <p class="slds-align_absolute-center">title</p>
+                <p>This is the body content of the card.</p>
+                <lightning-input 
+                  type="text"
+                  label=" Task Details"
+                  placeholder="Enter Task"
+                  required="true"
+                  message-when-value-missing="Kindly Enter the task"
+                  onchange={changeHandler}
+                  name="taskName"
+                  value={taskName}
+                  class="taskName"
+                ></lightning-input>
+                <lightning-input 
+                  type="date"  
+                  label="Set end date"
+                  field-level-help="Default end date is Today" 
+                  onchange={changeHandler}
+                  name="taskDate"
+                  value={taskDate}
+                ></lightning-input>
+            </div>
+            
+            <div slot="actions">
+                <p>action</p>
+                <lightning-button label="Add Task" onclick={addTaskHandler} class="slds-var-p-around_small"></lightning-button>
+            </div>
+            <div slot="footer" class="slds-var-p-around_small">
+                <p class="slds-float_left">footer</p>
+                <lightning-button label="Reset" onclick={resetTaskHandler} variant="brand" class="slds-var-p-around_small"></lightning-button>
+            </div>
+            <div>
+              <!-- Card Body  -->
+              
+            </div>
+          </lightning-card>
+        </div>
+
+        <div class="slds-col">
+            <lightning-card icon-name="standard:account" variant="base" title="To Do List">
+                <div class="slds-p-horizontal_small">
+                    Card Title
+                    <p>title</p>
+                    <p>This is the body content of the card.</p>
+                </div>
+                
+                <div slot="actions">
+                    <p>action</p>
+                    <lightning-button label="Action" onclick={handleActionClick}></lightning-button>
+                </div>
+                <div slot="footer">
+                    <p>footer</p>
+                </div>
+                <div>
+                  <!-- Card Body  -->
+                  
+                </div>
+            </lightning-card>
+        </div>
+
+        <div class="slds-col">
+            <lightning-card icon-name="standard:account" variant="base" title="Completed Task">
+                <div class="slds-p-horizontal_small">
+                    Card Title
+                    <p>title</p>
+                    <p>This is the body content of the card.</p>
+                </div>
+                
+                <div slot="actions">
+                    <p>action</p>
+                    <lightning-button label="Action" onclick={handleActionClick}></lightning-button>
+                </div>
+                <div slot="footer">
+                    <p>footer</p>
+                </div>
+                <div>
+                  <!-- Card Body  -->
+                  
+                </div>
+            </lightning-card>
+        </div>
+      </div>
+</template>

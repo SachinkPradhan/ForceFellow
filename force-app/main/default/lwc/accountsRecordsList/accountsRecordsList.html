@@ -1,0 +1,7 @@
+<template>
+    <lightning-card title="Account Record">
+        <template for:each={accounts.data} for:item="accObj">
+            <p key={accObj.id} class="slds-p-horizontal_small"></p>
+        </template>
+    </lightning-card>
+</template>

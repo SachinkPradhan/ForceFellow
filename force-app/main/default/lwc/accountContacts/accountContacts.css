@@ -1,0 +1,6 @@
+.slds-badge {
+    background-color: var(--slds-c-badge-color-background, #ECEBEA);
+    border-radius: var(--slds-c-badge-radius-border, 15rem);
+    color: var(--slds-c-badge-text-color, #080707);
+    
+  }

@@ -1,0 +1,28 @@
+.tile {
+    padding: 8px;
+    border-color: red;
+    background-color: #FFFFFF;
+    border-radius: 0.25rem;
+  }
+  
+  a {
+  color: inherit;
+  }
+  
+  img.car {
+    height: 120px;
+    max-width: initial;
+    pointer-events: none;
+  }
+  
+  .title {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .selected{
+    border-width: medium;
+    border-radius: 20px;
+    border-color: royalblue;
+    border-style: solid;
+  }
