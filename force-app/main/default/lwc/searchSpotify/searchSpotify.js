@@ -24,8 +24,8 @@ export default class SearchSpotify extends LightningElement {
                 this.trackData = response.tracks.items[0];
                 this.trackUrl = this.trackData.album.images[0].url;
 
-                console.log('Sachin*** Track Data:', this.trackData);
-                console.log('Sachin*** Track URL:', this.trackUrl);
+                //console.log('Sachin*** Track Data:', this.trackData);
+                //console.log('Sachin*** Track URL:', this.trackUrl);
                 if(response){
                     this.displayResults = true;
                     this.showToast('Success', 'Data fetched successfully from Spotify.', 'success');
