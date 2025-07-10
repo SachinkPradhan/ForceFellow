@@ -34,7 +34,7 @@ export default class SearchSpotify extends LightningElement {
                     this.showToast('Error', 'No data found for the given search term.', 'error');
                 }
 
-                console.log('Spotify response:', response);
+                //console.log('Spotify response:', response);
                 //console.log('Parsed data:', JSON.stringify(response, null, 2));
                 //console.log('Href:', response.tracks.href);
             } catch (error) {
