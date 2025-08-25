@@ -1,0 +1,70 @@
+<template>
+   <lightning-card title="Account Details" icon-name="standard:account" variant="base">
+        <div class="slds-p-around_medium">
+            <lightning-combobox
+              name="parentacc"
+              label="Parent Account"
+              value={value}
+              placeholder="Select Parent Account"
+              options={parentOptions}
+              onchange={handleChange}
+              message-when-value-missing="Please select a parent account"
+              field-level-help="Select a parent account from the list"
+              required
+              class="validateme"
+            ></lightning-combobox>
+            <lightning-input 
+              type="text"
+              placeholder="Enter account Name"
+              onchange={handleChange}
+              label="Account Name" 
+              name="accname"
+              message-when-value-missing="Please enter a name"
+              min-length="2"
+              max-length="60"
+              message-when-too-short="Account name must be at least 1 character long"
+              message-when-too-long="Account name cannot be more than 60 characters long"
+              pattern="[A-Za-z]*"
+              message-when-pattern-mismatch="Account name can only contain letters"
+              field-level-help="Account name must be at least 2 character long and cannot be more than 60 characters long and can only contain letters"
+              required
+              class="validateme"
+            ></lightning-input>
+            <lightning-input 
+              type="date"
+              onchange={handleChange}
+              name="slaexpdt"
+              label="SLA Expiration Date"
+            ></lightning-input>
+            <template lwc:if={accountInfoPicklist.data}>
+              <lightning-radio-group 
+                name="slatype"
+                onchange={handleChange}
+                label="SLA Type"
+                options={accountInfoPicklist.data.values}
+                type="button"
+              ></lightning-radio-group>
+            </template>
+            <lightning-slider 
+              label="No of Locations" 
+              max="50"
+              min="1"
+              
+              step="1"
+              onchange={handleChange}
+              value={selNoOfLocations}
+              variant="standard"
+              name="nooflocations"
+            ></lightning-slider>
+            <lightning-input-rich-text
+              label="Description"
+              name="description"
+              disabled-categories="FORMAT_FONT"
+              onchange={handleChange}
+            ></lightning-input-rich-text>
+        </div>
+        <div class="slds-p-around_medium slds-text-align_right">
+          <lightning-button variant="brand" label="Save" onclick={handleSave}></lightning-button>
+        </div>
+   </lightning-card> 
+</template>

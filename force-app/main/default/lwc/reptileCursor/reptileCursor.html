@@ -1,0 +1,23 @@
+<template>
+  <div class="reptile-wrapper">
+    <template for:each={segments} for:item="seg">
+      <div
+        key={seg.id}
+        class="segment"
+      ></div>
+    </template>
+    <svg class="connectors">
+      <template for:each={lines} for:item="line">
+        <line
+          key={line.id}
+          x1={line.x1}
+          y1={line.y1}
+          x2={line.x2}
+          y2={line.y2}
+          stroke="#32cd32"
+          stroke-width="2"
+        />
+      </template>
+    </svg>
+  </div>
+</template>
